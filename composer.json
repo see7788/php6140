@@ -1,0 +1,19 @@
+{
+    "name": "see7788/jiankong0",
+    "autoload": {
+        "psr-4": {
+            "jiankong0": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "kitchens",
+            "email": "kitchens@qq.com"
+        }
+    ],
+    "require": {
+        "workerman/workerman": "^4.0",
+        "ext-json": "*",
+        "workerman/redis": "^1.0"
+    }
+}
