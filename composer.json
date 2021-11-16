@@ -5,8 +5,8 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "php6140\\tool": "tool",
-      "php6140\\demo": "demo"
+      "php6140\\tool\\": "./tool",
+      "php6140\\demo\\": "./demo"
     }
   },
   "authors": [
