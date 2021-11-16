@@ -11,7 +11,8 @@
   },
   "repositories": [
     {
-      "type": "vcs",
+      "type": "git",
+      "reference": "master",
       "url": "https://github.com/see7788/php6140"
     }
   ],
