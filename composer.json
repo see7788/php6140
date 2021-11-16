@@ -27,12 +27,5 @@
     "workerman/redis": "^1.0",
     "ext-json": "*",
     "ext-redis": "*"
-  },
-  "dev-package": {
-    "type": "path",
-    "url": "relative/or/absolute/path/to/my/dev-package",
-    "options": {
-      "symlink": true
-    }
   }
 }
