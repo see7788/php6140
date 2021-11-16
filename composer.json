@@ -2,12 +2,20 @@
   "name": "see7788/php6140",
   "description": "软件包描述,上传到仓库之前，我们可以使用本地路径来引入,通过dev-package；更多介绍https://getcomposer.org/doc/05-repositories.md#vcs；",
   "license": "MIT",
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "php6140\\tool": "tool",
-      "php6140\\demo": "demo"
+      "see7788\\php6140\\tool": "tool",
+      "see7788\\php6140\\demo": "demo"
     }
   },
+  "repositories": [
+    {
+      "type": "git",
+      "reference": "master",
+      "url": "https://github.com/see7788/php6140"
+    }
+  ],
   "authors": [
     {
       "name": "kitchens",
