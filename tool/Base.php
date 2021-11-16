@@ -45,9 +45,6 @@ class Base
         var_dump('__call', $method, $args);
     }
 
-    function usersConnection(){
-        return  new UsersConnection();
-    }
     /**
      * 心跳
      * $connection->lastMessageTime = time()
@@ -74,6 +71,11 @@ class Base
         }
     }
 
+
+    function usersConnectionInit(): UsersConnection
+    {
+        return  new UsersConnection();
+    }
 
     function httpReq(TcpConnection $connection, Request $request): HttpReq
     {

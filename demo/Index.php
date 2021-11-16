@@ -15,10 +15,7 @@ class Index extends Base
 {
     public Redis $redis;
     public array $httpFiles;
-    /**
-     * @var UsersConnection
-     */
-    public $users;
+    public UsersConnection $users;
     public Worker $httpServe;
     public Worker $websocketServe;
 
@@ -30,7 +27,7 @@ class Index extends Base
             $redisPort = 6379;
             $redisSelectId = 0;
             $this->redis = $this->redisInit($redisPort, $redisSelectId);
-            $this->users = $this->usersConnection();
+            $this->users = $this->usersConnectionInit();
             $this->httpServeInit();
             $this->webSocketInit();
         };
@@ -42,6 +39,8 @@ class Index extends Base
         $c = $this->httpServe = new Worker("http://0.0.0.0:6001");
         $c->onWorkerStart = function (Worker $worker) {
             echo "Worker starting...\n";
+            $cc=$this->redis->hGetAll('*');
+            var_dump($cc);
             //$client = stream_socket_client('tcp://127.0.0.1:5678', $errno, $errmsg, 1);
         };
         $c->onError = array($this, 'onError');
@@ -53,7 +52,6 @@ class Index extends Base
         };
         $c->onMessage = function (TcpConnection $connection, Request $request) {
             $type = $this->httpReq($connection, $request)->nowRouter('sse');
-            var_dump($type);
             if (method_exists($this,$type)&&in_array($type, array('sse', 'sseget', 'set'))) {
                 call_user_func([$this,$type],[$connection, $request]);
                 $this->$type($connection, $request);
