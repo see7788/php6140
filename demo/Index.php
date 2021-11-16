@@ -1,14 +1,14 @@
 <?php
 
-namespace see7788\php6140\demo;
+namespace php6140\demo;
 
 use Exception;
 use Redis;
-use see7788\php6140\tool\UsersConnection;
+use php6140\tool\UsersConnection;
 use Workerman\Timer;
 use Workerman\Connection\TcpConnection;
 use Workerman\Protocols\Http\Request;
-use see7788\php6140\tool\Base;
+use php6140\tool\Base;
 use Workerman\Worker;
 
 class Index extends Base

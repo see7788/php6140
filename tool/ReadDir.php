@@ -1,6 +1,6 @@
 <?php
 
-namespace see7788\php6140\tool;
+namespace php6140\tool;
 
 class ReadDir
 {
