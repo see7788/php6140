@@ -1,19 +1,38 @@
 {
-    "name": "see7788/jiankong0",
-    "autoload": {
-        "psr-4": {
-            "jiankong0": "src"
-        }
-    },
-    "authors": [
-        {
-            "name": "kitchens",
-            "email": "kitchens@qq.com"
-        }
-    ],
-    "require": {
-        "workerman/workerman": "^4.0",
-        "ext-json": "*",
-        "workerman/redis": "^1.0"
+  "name": "see7788/php6140",
+  "description": "软件包描述,上传到仓库之前，我们可以使用本地路径来引入,通过dev-package；更多介绍https://getcomposer.org/doc/05-repositories.md#vcs；",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "see7788\\php6140\\tool": "tool",
+      "see7788\\php6140\\demo": "demo"
     }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/see7788/php6140"
+    }
+  ],
+  "authors": [
+    {
+      "name": "kitchens",
+      "email": "kitchens@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "workerman/workerman": "^4.0",
+    "workerman/redis": "^1.0",
+    "ext-json": "*",
+    "ext-redis": "*"
+  },
+  "dev-package": {
+    "type": "path",
+    "url": "relative/or/absolute/path/to/my/dev-package",
+    "options": {
+      "symlink": true
+    }
+  }
 }

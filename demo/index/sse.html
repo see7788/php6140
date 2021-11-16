@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>众参智能柜</title>
+    <script crossorigin="anonymous"
+            integrity="sha512-pSyYzOKCLD2xoGM1GwkeHbdXgMRVsSqQaaUoHskx/HF09POwvow2VfVEdARIYwdeFLbu+2FCOTRYuiyeGxXkEg=="
+            src="https://lib.baomitu.com/vue/2.6.14/vue.js"></script>
+</head>
+<body>
+<div id="app">{{message}}</div>
+<script>
+    let h=window.location.href;
+    let queryint=h.indexOf('?');
+    let url =queryint>-1? h.substring(0,h.indexOf('?')):h;
+    //console.log(h,h.indexOf('?'),url)
+    let source = new EventSource(url+'?api=sseget');
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message: "0",
+        },
+        methods: {
+            init(e){
+                console.log(e)
+                this.message = e.data
+            }
+        },
+        created: function () {
+            source.addEventListener("init", this.init, false);
+            source.addEventListener('on', this.init, false);
+        }
+    })
+
+</script>
+
+</body>
+
+</html>
