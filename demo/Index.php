@@ -138,7 +138,7 @@ class Index extends Base
         $port = $connection->getLocalPort();
         $connection->send(
             "
-                <script crossorigin='anonymous' src='https://lib.baomitu.com/vue/2.6.14/vue.js'></script>
+                <script crossorigin='anonymous' src='vue.js'></script>
                 <div id='app'>{{message}}</div>
                 <script>
                        /* if(!window.localStorage){
@@ -155,10 +155,6 @@ class Index extends Base
                             console.log(storage.b,typeof storage['b']);
                             console.log(storage.c,typeof storage['c']);
                         }*/
-                       let h=window.location.href;
-                       let queryint=h.indexOf('?');
-                       let url =queryint>-1? h.substring(0,h.indexOf('?')):h;
-                      // console.log(h,h.indexOf('?'),url)
                        let source = new EventSource('$port/sseget');
                        new Vue({
                                 el: '#app',
