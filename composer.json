@@ -1,10 +1,10 @@
 {
   "name": "see7788/php6140",
-  "description": "软件包描述:上传到仓库之前  我们可以使用本地路径来引入,通过dev-package； 更多介绍https://getcomposer.org/doc/05-repositories.md#vcs；",
+  "description": "正常使用，只要继承",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "php6140\\tool\\": "./tool",
+      "php6140\\tool\\": "./src",
       "php6140\\demo\\": "./demo"
     }
   },
@@ -16,7 +16,8 @@
   ],
   "require": {
     "php": ">=7.4",
-    "workerman/workerman": ">=3.5.0",
+    "workerman/workerman": "*",
+    "workerman/http-client": "*",
     "ext-json": "*",
     "ext-redis": "*"
   }

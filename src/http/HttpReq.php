@@ -1,11 +1,9 @@
 <?php
 
-namespace php6140\tool;
+namespace php6140\tool\http;
 
-use Workerman\Connection\AsyncTcpConnection;
 use Workerman\Connection\TcpConnection;
 use Workerman\Protocols\Http\Request;
-use Workerman\Protocols\Http\Response;
 
 class HttpReq
 {

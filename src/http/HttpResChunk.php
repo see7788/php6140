@@ -1,6 +1,6 @@
 <?php
 
-namespace php6140\tool;
+namespace php6140\tool\http;
 
 use Workerman\Connection\TcpConnection;
 use Workerman\Protocols\Http\Chunk;

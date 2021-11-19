@@ -4,20 +4,176 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01c987724616c565c404774fd3ba3536",
+    "content-hash": "be8b82e3cb9869c2ce4a4ae45976625b",
     "packages": [
         {
-            "name": "workerman/workerman",
-            "version": "dev-master",
+            "name": "psr/http-message",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/walkor/Workerman.git",
-                "reference": "12f9367d02a0aadaf1439fc2ea67e9924842fd43"
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/Workerman/zipball/12f9367d02a0aadaf1439fc2ea67e9924842fd43",
-                "reference": "12f9367d02a0aadaf1439fc2ea67e9924842fd43",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "workerman/http-client",
+            "version": "v0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/walkor/http-client.git",
+                "reference": "f4a4365c44a2837035f290c593b26343a6058ba1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/walkor/http-client/zipball/f4a4365c44a2837035f290c593b26343a6058ba1",
+                "reference": "f4a4365c44a2837035f290c593b26343a6058ba1",
+                "shasum": ""
+            },
+            "require": {
+                "workerman/psr7": ">=1.4.3",
+                "workerman/workerman": ">=3.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\Http\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "homepage": "http://www.workerman.net",
+            "support": {
+                "issues": "https://github.com/walkor/http-client/issues",
+                "source": "https://github.com/walkor/http-client/tree/v0.1.7"
+            },
+            "time": "2020-11-24T01:44:51+00:00"
+        },
+        {
+            "name": "workerman/psr7",
+            "version": "v1.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/walkor/psr7.git",
+                "reference": "8f163224ed5bb93fb210da9211651fcd88acb97b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/walkor/psr7/zipball/8f163224ed5bb93fb210da9211651fcd88acb97b",
+                "reference": "8f163224ed5bb93fb210da9211651fcd88acb97b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "support": {
+                "source": "https://github.com/walkor/psr7/tree/v1.4.4"
+            },
+            "time": "2020-08-31T09:54:31+00:00"
+        },
+        {
+            "name": "workerman/workerman",
+            "version": "v4.0.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/walkor/Workerman.git",
+                "reference": "df1a00d8f3ebd2d68527a048abb6d298fdc4941b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/walkor/Workerman/zipball/df1a00d8f3ebd2d68527a048abb6d298fdc4941b",
+                "reference": "df1a00d8f3ebd2d68527a048abb6d298fdc4941b",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +182,6 @@
             "suggest": {
                 "ext-event": "For better performance. "
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -58,12 +213,12 @@
                 "source": "https://github.com/walkor/workerman",
                 "wiki": "http://doc.workerman.net/"
             },
-            "time": "2021-11-13T13:17:29+00:00"
+            "time": "2021-10-29T02:59:06+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,

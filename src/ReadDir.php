@@ -22,8 +22,8 @@ class ReadDir
                     }
                 }
             }
+            closedir($handle);
         }
-        closedir($handle);
         return $this;
     }
 
