@@ -4,8 +4,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "php6140\\tool\\": "./src",
-      "php6140\\demo\\": "./demo"
+      "redis\\": "./src"
     }
   },
   "authors": [

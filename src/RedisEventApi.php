@@ -1,6 +1,6 @@
 <?php
 
-namespace php6140\tool\redis;
+namespace redis;
 
 use Redis;
 
